@@ -5,20 +5,20 @@ from fastapi.logger import logger as fastapi_logger
 from src.log import setup_custom_logger, formatter, logging, fileHandler, BASE_DIR
 
 logger = setup_custom_logger(__name__)
-# fastapi_logger.handlers = logger.handlers
-# fastapi_logger.setLevel(logger.level)
+fastapi_logger.handlers = logger.handlers
+fastapi_logger.setLevel(logger.level)
 
 # uvicorn_access_logger = logging.getLogger("uvicorn.access")
 # uvicorn_access_logger.handlers = logger.handlers
 # uvicorn_access_logger.setLevel(logger.level)
 
-# handler = logging.StreamHandler()
-# handler.setFormatter(formatter)
-# uvicorn_access_logger = logging.getLogger("uvicorn.access")
-# uvicorn_access_logger.handlers = []
-# uvicorn_access_logger.addHandler(handler)
-# uvicorn_access_logger.setLevel(logger.level)
-# uvicorn_access_logger.addHandler(fileHandler)
+handler = logging.StreamHandler()
+handler.setFormatter(formatter)
+uvicorn_access_logger = logging.getLogger("uvicorn.access")
+uvicorn_access_logger.handlers = []
+uvicorn_access_logger.addHandler(handler)
+uvicorn_access_logger.setLevel(logger.level)
+uvicorn_access_logger.addHandler(fileHandler)
 
 app = FastAPI()
 
