@@ -24,3 +24,4 @@
 * https://docs.python.org/3/library/asyncio-task.html#awaitables
 * https://stackoverflow.com/questions/56729764/python-3-7-asyncio-sleep-and-time-sleep/56730924#56730924
 * https://dev.to/0xbf/turn-sync-function-to-async-python-tips-58nn
+* https://xinhuang.github.io/posts/2017-07-31-common-mistakes-using-python3-asyncio.html
